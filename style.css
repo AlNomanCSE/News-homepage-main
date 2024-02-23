@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+
+  --Off_white: hsl(36, 100%, 99%);
+  --Grayish_blue: hsl(233, 8%, 79%);
+  --Dark_grayish_blue: hsl(236, 13%, 42%);
+  --Very_dark_blue: hsl(240, 100%, 5%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 14px;
+}
+
+ul > li {
+  list-style: none;
+}
+
+@media screen and (width>=991px) {
+  .content {
+    width: 1300px;
+    height: 780px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "a a a"
+      "h h s"
+      "h h s"
+      "ht hp s";
+    gap: 1.4rem;
+  }
+
+  .navbar {
+    grid-area: a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+
+  .navbarList {
+    display: grid;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: end;
+    color: var(--Grayish_blue);
+  }
+
+  .heroSection {
+    grid-area: h;
+    background-color: aqua;
+  }
+
+  .heroSection > img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section {
+    grid-area: s;
+    background-color: var(--Very_dark_blue);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+    color: #fff;
+    padding: 2rem;
+    line-height: 1.6;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+    color: var(--Soft-orange);
+  }
+
+  .section p {
+    color: var(--Grayish_blue);
+  }
+
+  .heroTitle {
+    grid-area: ht;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  .heroText {
+    grid-area: hp;
+    color: var(--Dark_grayish_blue);
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .heroText button {
+    height: 40px;
+    width: 150px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: none;
+    margin-top: 20px;
+    background-color: var(--Soft-red);
+  }
+}
