@@ -45,12 +45,13 @@ ul > li {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 50px repeat(3, 1fr) 150px;
     grid-template-areas:
       "a a a"
       "h h s"
       "h h s"
-      "ht hp s";
+      "ht hp s"
+      "r l g";
     gap: 1.4rem;
   }
 
@@ -75,7 +76,7 @@ ul > li {
     flex-direction: row;
     gap: 3rem;
     justify-content: end;
-    color: var(--Grayish_blue);
+    color: var(--Dark_grayish_blue);
   }
 
   .heroSection {
@@ -133,5 +134,44 @@ ul > li {
     border: none;
     margin-top: 20px;
     background-color: var(--Soft-red);
+  }
+  .retro {
+    grid-area: r;
+  }
+  .retro img {
+    height: 100%;
+  }
+  .laptop {
+    grid-area: l;
+  }
+  .laptop img {
+    height: 100%;
+  }
+  .game {
+    grid-area: g;
+  }
+  .game img {
+    height: 100%;
+  }
+  .common {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+  .add {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding-left: 1rem;
+  }
+  .add span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Grayish_blue);
+  }
+  .add p {
+    font-size: 18px;
+    color: var(--Dark_grayish_blue);
   }
 }
