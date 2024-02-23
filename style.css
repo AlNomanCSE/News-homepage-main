@@ -43,8 +43,14 @@ svg {
   display: block;
 }
 @media screen and (width<991px) {
+  .heroSection .forPC{
+    display: none;
+  }
+  .heroSection .forMbl{
+    display: block;
+  }
   .content {
-    width: 320px;
+    width: 380px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -137,7 +143,12 @@ svg {
     justify-content: end;
     color: var(--Dark_grayish_blue);
   }
-
+  .heroSection .forPC{
+    display: block;
+  }
+  .heroSection .forMbl{
+    display: none;
+  }
   .heroSection {
     grid-area: h;
   }
