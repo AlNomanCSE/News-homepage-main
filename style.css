@@ -37,15 +37,80 @@ p {
 ul > li {
   list-style: none;
 }
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+@media screen and (width<991px) {
+  .content {
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .heroTitle {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .heroText {
+    color: var(--Dark_grayish_blue);
+  }
+  button {
+    height: 40px;
+    width: 150px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: none;
+    margin-top: 20px;
+    background-color: var(--Soft-red);
+  }
+  .section {
+    background-color: var(--Very_dark_blue);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.9rem;
+    line-height: 1.5;
+  }
+  .section p {
+    color: var(--Dark_grayish_blue);
+  }
+  .common {
+    height: 100px;
+    display: flex;
+    gap: 1rem;
+  }
+  .common img {
+    height: 100%;
+  }
+  .add {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .add span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Grayish_blue);
+  }
+  .add p {
+    font-size: 14px;
+    color: var(--Dark_grayish_blue);
+  }
+}
 
 @media screen and (width>=991px) {
   .content {
-    width: 1300px;
-    height: 780px;
-
+    width: 80vw;
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px repeat(3, 1fr) 150px;
+    grid-template-rows: 50px repeat(3, 1fr) 200px;
     grid-template-areas:
       "a a a"
       "h h s"
@@ -63,12 +128,6 @@ ul > li {
     align-items: center;
   }
 
-  img,
-  svg {
-    max-width: 100%;
-    display: block;
-  }
-
   .navbarList {
     display: grid;
     width: 40%;
@@ -81,7 +140,6 @@ ul > li {
 
   .heroSection {
     grid-area: h;
-    background-color: aqua;
   }
 
   .heroSection > img {
@@ -100,11 +158,11 @@ ul > li {
     height: 100%;
     color: #fff;
     padding: 2rem;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   .section h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--Soft-orange);
   }
 
@@ -121,7 +179,7 @@ ul > li {
   .heroText {
     grid-area: hp;
     color: var(--Dark_grayish_blue);
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.4;
   }
   .heroText button {
@@ -132,7 +190,7 @@ ul > li {
     text-transform: uppercase;
     letter-spacing: 3px;
     border: none;
-    margin-top: 20px;
+    margin-top: 83px;
     background-color: var(--Soft-red);
   }
   .retro {
@@ -171,7 +229,7 @@ ul > li {
     color: var(--Grayish_blue);
   }
   .add p {
-    font-size: 18px;
+    font-size: 1vw;
     color: var(--Dark_grayish_blue);
   }
 }
