@@ -1,12 +1,23 @@
 const forNav = document.querySelector(".menumobile");
 const navList = document.querySelector(".navbarListmobile");
+const menu = document.querySelector(".menu");
 
-// window.addEventListener("scroll", () => {
-//   navList.classList.toggle('sticky',window.scrollY>0);
-// });
+let menuOpen = false;
+
 forNav.addEventListener("click", () => {
-  navList.classList.toggle("visible");
-  document
-    .querySelector(".backgroundOpacity")
-    .classList.toggle("opacityControl");
+  if (!menuOpen) {
+    navList.classList.add("visible");
+    document
+      .querySelector(".backgroundOpacity")
+      .classList.add("opacityControl");
+    forNav.querySelector("img").src = "./images/icon-menu-close.svg";
+    menuOpen = true;
+  } else {
+    navList.classList.remove("visible");
+    document
+      .querySelector(".backgroundOpacity")
+      .classList.remove("opacityControl");
+    forNav.querySelector("img").src = "./images/icon-menu.svg";
+    menuOpen = false;
+  }
 });

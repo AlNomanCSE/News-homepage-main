@@ -58,11 +58,12 @@ svg {
   .logombl {
     position: absolute;
     top: 1.5rem;
+    left: 1rem;
   }
   .menumobile {
     position: fixed;
     top: 2rem;
-    right: 1.5rem;
+    right: 3rem;
     z-index: 3;
   }
   .navbarListmobile {
@@ -154,7 +155,8 @@ svg {
   .menu,
   .logombl,
   .menu,
-  .navbarListmobile {
+  .navbarListmobile,
+  .backgroundOpacity {
     display: none;
   }
   .content {
