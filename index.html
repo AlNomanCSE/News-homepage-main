@@ -10,7 +10,24 @@
   <body>
     <div class="container">
       <div class="content">
-        <nav class="navbar">
+        <!-- for mobile menu -->
+        <div class="logombl">
+          <img src="./images/logo.svg" alt="logombl" srcset="" />
+        </div>
+        <div class="menumobile">
+          <img src="./images/icon-menu.svg" alt="menu" class="menu" />
+        </div>
+        <ul class="navbarListmobile">
+          <li>Home</li>
+          <li>new</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categorise</li>
+        </ul>
+        <div class="backgroundOpacity"></div>
+        <!-- end mobile menu -->
+        <nav class="navbar navbarforPC">
+          <img src="./images/icon-menu.svg" alt="" class="menu" />
           <div class="logo">
             <img src="./images/logo.svg" alt="image" />
           </div>
@@ -24,11 +41,10 @@
         </nav>
         <main class="heroSection">
           <img
-            src="./images/image-web-3-mobile.jpg"
+            src="./images/image-web-3-desktop.jpg"
             alt="image"
-            class="forPC"
+            class="forMbl"
           />
-          <!-- <img src="./images/image-web-3-desktop.jpg" alt="image" class="forMbl" /> -->
         </main>
 
         <div class="heroTitle">The Bright <br />Future of Web 3.0?</div>
@@ -90,5 +106,6 @@
         </div>
       </div>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
